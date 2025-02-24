@@ -26,31 +26,61 @@
                 margin: 0;
                 padding: 0;
                 display: flex;
+                flex-wrap: nowrap;
+                overflow: hidden;
+            }
+            #left-container, #right-container {   
+                flex: 1;
+                flex-shrink: 0;
+                min-width: 50vw;
+                max-width: 50vw;
+                height: 100vh;
+                padding: 10px;
+                box-sizing: border-box;
             }
             #left-container {
-                height: 100vh;
-                width: 50vw;
                 background-color: blanchedalmond;
-                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                overflow: hidden;
             }
+
             #right-container {
-                height: 100vh;
-                width: 50vw;
                 background-color: white;
+                display: flex;
+                align-items: top;
                 justify-content: center;
+                overflow: hidden;
+            }
+            #temp-container {
+                font-size: 8vh;
+                word-wrap: break-word;
+            }
+            #weather-container {
+                margin-left: 20%;
+                font-size: 4vh;
+            }
+            .temp {
+                font-weight: bold;
+                margin-left: 10px;
+            }
+            img {
+                height: auto;
+                max-width: 100%;
             }
             
         </style>
-                <div id="left-container" class="d-flex align-items-start justify-content-center">
-                    <div id="temp-container" class="d-flex" style="font-size: 15vh;">
+                <div id="left-container" class="d-flex">
+                    <div id="temp-container" class="d-flex justify-content-start" style="font-size: 8vh;">
                         <p class="temp fw-bold me-4 ml-4 mt-4">Temperature</p>
                     </div>
                             
-                    <div class="d-flex flex-column align-items-center mt-4" style="height: 20vh; width: 25vw; background-color: blanchedalmond; color: black; font-size: 5vh;">
+                    <div id="weather-container" class="d-flex flex-column align-items-center ml-4 mt-4" style="height: 20vh; width: 25vw; background-color: blanchedalmond; color: black;">
                         <p>Humidity</p>
                     
                         <p class="humidity">Humidity</p>
-                        <p>Precipitation</p>
+                        <p id="precipitation">Precipitation</p>
                         <p class="precipitation">precipitation</p>
                         
                         <p>Visibility</p>

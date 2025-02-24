@@ -94,9 +94,6 @@ async function getWeather() {
             document.querySelector('.weatherType').innerHTML = 'Heavy Hail Showers';
             animation.src = 'images/hail.gif';
         }   
-    
-        
-
 
     } catch (notGood) {
         console.error("Weather data no good:", notGood);
