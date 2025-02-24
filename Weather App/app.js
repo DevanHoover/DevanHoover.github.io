@@ -107,3 +107,8 @@ async function getWeather() {
 
 getWeather();
 setInterval(getWeather, 60000); // updates every hour
+
+setInterval(() => {
+    console.log("Force page reload for updates");
+    window.location.reload();
+}, 60000); // reloads page every hour for updates
