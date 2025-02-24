@@ -97,25 +97,9 @@ async function getWeather() {
     
         
 
-        setBackgroundImg(temp);
 
     } catch (notGood) {
         console.error("Weather data no good:", notGood);
-    }
-}
-
-function setBackgroundImg(temp) {
-
-    document.getElementById('hot').classList.add('d-none');
-    document.getElementById('cold').classList.add('d-none');
-
-    if(temp >= 80) {
-        document.getElementById('hot').style.backgroundImage = "url('images/hot.png')";
-        document.getElementById('hot').classList.remove('d-none');
-    }
-else if(temp <= 40) {
-    document.getElementById('cold').style.backgroundImage = "url('images/temperature.png')";
-    document.getElementById('cold').classList.remove('d-none');
     }
 }
 
