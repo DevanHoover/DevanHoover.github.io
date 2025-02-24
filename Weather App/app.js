@@ -33,7 +33,7 @@ async function getWeather() {
 
         if(weatherType == 0) {
             document.querySelector('.weatherType').innerHTML = 'Clear Skies';
-            animation.src = 'Weather App/images/sun.gif';
+            animation.src = 'Weather%20App/images/sun.gif';
         } else if(weatherType == 1) {
             document.querySelector('.weatherType').innerHTML = 'Mostly Sunny';
             animation.src = 'images/sun.gif';
