@@ -106,4 +106,4 @@ async function getWeather() {
 }
 
 getWeather();
-setInterval(getWeather, 3600000); // updates every hour
+setInterval(getWeather, 60000); // updates every hour
