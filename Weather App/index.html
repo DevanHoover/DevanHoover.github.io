@@ -3,16 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <title>CookevillianWeather</title>
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-iphone60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touchicon-ipad-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touchicon-iphone-retina-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touchicon-ipad-retina-152x152.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.11.3/font/bootstrap-icons.css">
 </head>
-<body>
-    <h1>Gimme That Weather Son</h1>
-    <p class="temp">Temperature</p>
-    <p class="humidity">Humidity</p>
-    <p class="precipitation">precicipitation</p>
-    <p class="visibility">visibility</p>
-    <script src="app.js"></script>
+</head>
+<body style="background-color: blanchedalmond;" height="100%" width="100%">
     
+        <style>
+            body {
+                background-color: blanchedalmond;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            #left-container {
+                height: 100vh;
+                width: 50vw;
+                background-color: blanchedalmond;
+                align-items: center;
+            }
+            #right-container {
+                height: 100vh;
+                width: 50vw;
+                background-color: white;
+                justify-content: center;
+            }
+            
+        </style>
+                <div id="left-container" class="d-flex align-items-start justify-content-center">
+                    <div id="temp-container" class="d-flex" style="font-size: 15vh;">
+                        <p class="temp fw-bold me-4 ml-4 mt-4">Temperature</p>
+                    </div>
+                            
+                    <div class="d-flex flex-column align-items-center mt-4" style="height: 20vh; width: 25vw; background-color: blanchedalmond; color: black; font-size: 5vh;">
+                        <p>Humidity</p>
+                    
+                        <p class="humidity">Humidity</p>
+                        <p>Precipitation</p>
+                        <p class="precipitation">precipitation</p>
+                        
+                        <p>Visibility</p>
+                
+                        <p class="visibility">visibility</p>
+                    </div>
+                
+             </div>  
+             <div id="right-container" class="d-flex">
+                <div class="d-flex flex-column align-items-center mt-4" style="height: 20vh; width: 25vw; background-color: white; color: black; font-size: 5vh;">
+                
+                    <p>Weather Conditions</p>
+                        <p class="weatherType">WeatherType</p>
+                <img class="d-flex align-items-center ml-4" src="/images/sun.gif" alt="sun" style="height: 50vh; width: 25vw;">
+                <p>Cookeville, Tn</p>
+             </div>
+        </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
