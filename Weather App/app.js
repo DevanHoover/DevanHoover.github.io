@@ -19,6 +19,7 @@ async function getWeather() {
         const visibility = (data.hourly.visibility[0] * 0.000621371).toFixed(0); // converts meters to miles 
 
         const weatherType = data.hourly.weather_code[0];
+        console.log("Weather Type:", weatherType);
         
 
 
@@ -33,7 +34,7 @@ async function getWeather() {
 
         if(weatherType == 0) {
             document.querySelector('.weatherType').innerHTML = 'Clear Skies';
-            animation.src = 'Weather%20App/images/sun.gif';
+            animation.src = './images/sun.gif';
         } else if(weatherType == 1) {
             document.querySelector('.weatherType').innerHTML = 'Mostly Sunny';
             animation.src = 'images/sun.gif';
