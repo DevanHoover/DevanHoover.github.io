@@ -34,7 +34,7 @@ async function getWeather() {
 
         if(weatherType == 0) {
             document.querySelector('.weatherType').innerHTML = 'Clear Skies';
-            animation.src = 'images/sun.gif';
+            animation.src = './images/sun.gif';
         } else if(weatherType == 1) {
             document.querySelector('.weatherType').innerHTML = 'Mostly Sunny';
             animation.src = 'images/sun.gif';
