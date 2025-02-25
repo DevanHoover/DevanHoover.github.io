@@ -15,23 +15,24 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrapicons@1.11.3/font/bootstrap-icons.css">
-</head>
-</head>
-<body style="background-color: blanchedalmond;" height="100%" width="100%">
     
         <style>
-            body {
+            html, body {
                 background-color: blanchedalmond;
                 height: 100vh;
                 margin: 0;
                 padding: 0;
                 display: flex;
-                flex-wrap: nowrap;
+                flex-direction: column;
                 overflow: hidden;
+            }
+            #big-container {
+                display: flex;
+                flex-grow: 1;
+
             }
             #left-container, #right-container {   
                 flex: 1;
-                flex-shrink: 0;
                 min-width: 50vw;
                 max-width: 50vw;
                 height: 100vh;
@@ -54,9 +55,14 @@
                 overflow: hidden;
             }
             #temp-container {
+                display: flex;
                 font-size: 8vh;
                 word-wrap: break-word;
-                margin-left: 20%;
+                justify-content: center;
+                align-items: flex-start;
+                text-align: center;
+                width: 100%;
+                height: 15vh;
             }
             #weather-container {
                 margin-left: 20%;
@@ -64,17 +70,32 @@
             }
             .temp {
                 font-weight: bold;
-                margin-left: 10px;
+                width: 100%;
+                text-align: center;
+                margin: 0;
             }
             img {
                 height: auto;
                 max-width: 100%;
             }
             
+            footer {
+                text-align: center;
+                padding: 10px;
+                background-color: white;
+                color: black;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
         </style>
+        </head>
+        <body>
+            <div id="big-container">
                 <div id="left-container" class="d-flex">
                     <div id="temp-container" class="d-flex justify-content-start" style="font-size: 8vh;">
-                        <p class="temp fw-bold me-4 ml-4 mt-4">Temperature</p>
+                        <p class="temp fw-bold">Temperature</p>
                     </div>
                             
                     <div id="weather-container" class="d-flex flex-column align-items-center ml-4 mt-4" style="height: 20vh; width: 25vw; background-color: blanchedalmond; color: black;">
@@ -88,20 +109,28 @@
                 
                         <p class="visibility">visibility</p>
                     </div>
-                
              </div>  
+
              <div id="right-container" class="d-flex">
                 <div class="d-flex flex-column align-items-center mt-4" style="height: 20vh; width: 25vw; background-color: white; color: black; font-size: 5vh;">
                 
-                    <p>Weather Conditions</p>
+                
                         <p class="weatherType">WeatherType</p>
                 <img class="d-flex align-items-center ml-4" src="./images/sun.gif" alt="sun" style="height: 50vh; width: 25vw;">
                 <p>Cookeville, Tn</p>
              </div>
         </div>
+    </div>
+
+    <footer>
+        <p>Weather Data provided by <a href="https://open-meteo.com">Open Meteo</a></p>
+        <p>Animated Icons provided by <a href="https://www.flaticon.com/free-animated-icons/rain" title="rain animated icons">Freepik - Flaticon </a></p> 
+    </footer>
+
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
+
 
